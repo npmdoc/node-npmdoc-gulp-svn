@@ -1,0 +1,1362 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/yasinkocak/gulp-svn">gulp-svn (v1.0.7)</a>
+</h1>
+<h4>SVN plugin for gulp (gulpjs.com)</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-svn">module gulp-svn</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.add">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>add
+            <span class="apidocSignatureSpan">(file, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.addSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>addSync
+            <span class="apidocSignatureSpan">(file, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.checkout">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>checkout
+            <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.checkoutSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>checkoutSync
+            <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.commit">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>commit
+            <span class="apidocSignatureSpan">(message, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.commitSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>commitSync
+            <span class="apidocSignatureSpan">(message, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.delete">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>delete
+            <span class="apidocSignatureSpan">(file, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.deleteSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>deleteSync
+            <span class="apidocSignatureSpan">(file, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.diff">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>diff
+            <span class="apidocSignatureSpan">(file, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.diffSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>diffSync
+            <span class="apidocSignatureSpan">(file, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.exec">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>exec
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.execSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>execSync
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.export">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>export
+            <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.exportSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>exportSync
+            <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.list">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>list
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.listSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>listSync
+            <span class="apidocSignatureSpan">(options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.log">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>log
+            <span class="apidocSignatureSpan">(path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.logSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>logSync
+            <span class="apidocSignatureSpan">(path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.move">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>move
+            <span class="apidocSignatureSpan">(src, dest, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.moveSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>moveSync
+            <span class="apidocSignatureSpan">(src, dest, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.status">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>status
+            <span class="apidocSignatureSpan">(path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.statusSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>statusSync
+            <span class="apidocSignatureSpan">(path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.tag">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>tag
+            <span class="apidocSignatureSpan">(tag, message, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.tagSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>tagSync
+            <span class="apidocSignatureSpan">(tag, message, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.update">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>update
+            <span class="apidocSignatureSpan">(path, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svn.updateSync">
+            function <span class="apidocSignatureSpan">gulp-svn.</span>updateSync
+            <span class="apidocSignatureSpan">(path, options, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-svn" id="apidoc.module.gulp-svn">module gulp-svn</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.add" id="apidoc.element.gulp-svn.add">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>add
+        <span class="apidocSignatureSpan">(file, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (file, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!file) throw new Error('gulp-svn: File is required svn.add("file.js")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn add ' + file + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Example
+```javascript
+var gulp = require('gulp');
+var svn = require('gulp-svn');
+
+// Run svn add
+gulp.task('add', function(){
+return svn.<span class="apidocCodeKeywordSpan">add</span>('/file.js');
+}
+
+// Run svn add with error
+gulp.task('add', function(){
+return svn.add('./file.js', function(err){
+    if(err) throw err;
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.addSync" id="apidoc.element.gulp-svn.addSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>addSync
+        <span class="apidocSignatureSpan">(file, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSync = function (file, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!file) throw new Error('gulp-svn: File is required svn.add("file.js")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn add ' + file + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.checkout" id="apidoc.element.gulp-svn.checkout">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>checkout
+        <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkout = function (repo, path, options, cb)
+{
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!repo) throw new Error('gulp-svn: Repository is required svn.checkout("https://svn.example.com/something/")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn checkout ' + repo + ' ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(!cb &amp;&amp; typeof options === 'function') {
+    cb = options;
+    options = {};
+}
+
+if(!cb || typeof cb !== 'function') cb = function() {};
+if(!options) options = {};
+if(!repo) throw new Error('gulp-svn: Repository is required svn.<span class="apidocCodeKeywordSpan">checkout</span>("https
+://svn.example.com/something/")');
+if(!options.cwd) options.cwd = process.cwd();
+if(!options.args) options.args = ' ';
+
+var cmd = 'svn checkout ' + repo + ' ' + path + ' ' + options.args;
+
+if(options.username &amp;&amp; options.password) {
+    cmd += ' --username '+ options.username + ' --password ' + options.password;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.checkoutSync" id="apidoc.element.gulp-svn.checkoutSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>checkoutSync
+        <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkoutSync = function (repo, path, options, cb)
+{
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!repo) throw new Error('gulp-svn: Repository is required svn.checkout("https://svn.example.com/something/")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn checkout ' + repo + ' ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.commit" id="apidoc.element.gulp-svn.commit">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>commit
+        <span class="apidocSignatureSpan">(message, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (message, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!message) throw new Error('gulp-svn: Message is required svn.commit("Initial commit")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn commit -m "' + message + '" ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return svn.add('./file.js', {args: '--force'}, function(err){
+    if(err) throw err;
+});
+});
+
+// Run svn commit
+gulp.task('commit', function(){
+return svn.<span class="apidocCodeKeywordSpan">commit</span>('Initial commit', function(err){
+    if(err) throw err;
+});
+});
+
+// Run svn tag
+gulp.task('tag', function(){
+svn.tag('version-0.0.1', 'Tagged commit', function (err){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.commitSync" id="apidoc.element.gulp-svn.commitSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>commitSync
+        <span class="apidocSignatureSpan">(message, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commitSync = function (message, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!message) throw new Error('gulp-svn: Message is required svn.commit("Initial commit")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn commit -m "' + message + '" ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.delete" id="apidoc.element.gulp-svn.delete">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>delete
+        <span class="apidocSignatureSpan">(file, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (file, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!file) throw new Error('gulp-svn: File is required svn.add("file.js")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn delete ' + file + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.deleteSync" id="apidoc.element.gulp-svn.deleteSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>deleteSync
+        <span class="apidocSignatureSpan">(file, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deleteSync = function (file, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!file) throw new Error('gulp-svn: File is required svn.add("file.js")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn delete ' + file + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.diff" id="apidoc.element.gulp-svn.diff">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>diff
+        <span class="apidocSignatureSpan">(file, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diff = function (file, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!file) throw new Error('gulp-svn: File is required svn.diff("file.js")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn diff ' + file + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(!cb &amp;&amp; typeof options === 'function') {
+    cb = options;
+    options = {};
+}
+
+if(!cb || typeof cb !== 'function') cb = function() {};
+if(!options) options = {};
+if(!file) throw new Error('gulp-svn: File is required svn.<span class="apidocCodeKeywordSpan">diff</span>("file.js"
+;)');
+if(!options.cwd) options.cwd = process.cwd();
+if(!options.args) options.args = ' ';
+
+var cmd = 'svn diff ' + file + ' ' + options.args;
+
+if(options.username &amp;&amp; options.password) {
+    cmd += ' --username '+ options.username + ' --password ' + options.password;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.diffSync" id="apidoc.element.gulp-svn.diffSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>diffSync
+        <span class="apidocSignatureSpan">(file, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">diffSync = function (file, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!file) throw new Error('gulp-svn: File is required svn.diff("file.js")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn diff ' + file + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.exec" id="apidoc.element.gulp-svn.exec">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>exec
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function () {};
+    if(!options) options = {};
+    if(!options.log) options.log = !cb;
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if(err) return cb(err);
+        if(options.log &amp;&amp; !options.quiet) gutil.log(cmd+ '\n' + stdout, stderr);
+        else {
+            if(!options.quiet) gutil.log(cmd + ' (log : false)', stderr);
+        }
+        cb(err, stdout);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.execSync" id="apidoc.element.gulp-svn.execSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>execSync
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">execSync = function (options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function () {};
+    if(!options) options = {};
+    if(!options.log) options.log = !cb;
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.export" id="apidoc.element.gulp-svn.export">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>export
+        <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">export = function (repo, path, options, cb)
+{
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!repo) throw new Error('gulp-svn: Repository is required svn.export("https://svn.example.com/something/")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn export ' + repo + ' ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if(!cb &amp;&amp; typeof options === 'function') {
+    cb = options;
+    options = {};
+}
+
+if(!cb || typeof cb !== 'function') cb = function() {};
+if(!options) options = {};
+if(!repo) throw new Error('gulp-svn: Repository is required svn.<span class="apidocCodeKeywordSpan">export</span>("https
+://svn.example.com/something/")');
+if(!options.cwd) options.cwd = process.cwd();
+if(!options.args) options.args = ' ';
+
+var cmd = 'svn export ' + repo + ' ' + path + ' ' + options.args;
+
+if(options.username &amp;&amp; options.password) {
+    cmd += ' --username '+ options.username + ' --password ' + options.password;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.exportSync" id="apidoc.element.gulp-svn.exportSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>exportSync
+        <span class="apidocSignatureSpan">(repo, path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exportSync = function (repo, path, options, cb)
+{
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!repo) throw new Error('gulp-svn: Repository is required svn.export("https://svn.example.com/something/")');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn export ' + repo + ' ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.list" id="apidoc.element.gulp-svn.list">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>list
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn list ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.listSync" id="apidoc.element.gulp-svn.listSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>listSync
+        <span class="apidocSignatureSpan">(options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listSync = function (options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn list ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.log" id="apidoc.element.gulp-svn.log">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>log
+        <span class="apidocSignatureSpan">(path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (path, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!path) path = ' ';
+
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn log ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.<span class="apidocCodeKeywordSpan">log</span>(stdout, stderr);
+        cb();
+    });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.logSync" id="apidoc.element.gulp-svn.logSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>logSync
+        <span class="apidocSignatureSpan">(path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logSync = function (path, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!path) path = ' ';
+
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn log ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.move" id="apidoc.element.gulp-svn.move">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>move
+        <span class="apidocSignatureSpan">(src, dest, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">move = function (src, dest, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!src) throw new Error('gulp-svn: Source is required');
+    if(!dest) throw new Error('gulp-svn: Destination is required');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn log ' + src + ' ' + dest + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.moveSync" id="apidoc.element.gulp-svn.moveSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>moveSync
+        <span class="apidocSignatureSpan">(src, dest, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">moveSync = function (src, dest, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!src) throw new Error('gulp-svn: Source is required');
+    if(!dest) throw new Error('gulp-svn: Destination is required');
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn log ' + src + ' ' + dest + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.status" id="apidoc.element.gulp-svn.status">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>status
+        <span class="apidocSignatureSpan">(path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">status = function (path, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!path) path = ' ';
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn status ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.statusSync" id="apidoc.element.gulp-svn.statusSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>statusSync
+        <span class="apidocSignatureSpan">(path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">statusSync = function (path, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!path) path = ' ';
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var cmd = 'svn status ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.tag" id="apidoc.element.gulp-svn.tag">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>tag
+        <span class="apidocSignatureSpan">(tag, message, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tag = function (tag, message, options, cb) {
+    if (!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!tag) return cb(new Error('Tag must be defined'));
+    if(!message) return cb(new Error('Message must be defined'));
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var projectRoot;
+    if(options.projectRoot) {
+        projectRoot = options.projectRoot;
+    } else {
+        try {
+            projectRoot = svnProjectRoot.sync();
+        } catch(err) {
+            return cb(err);
+        }
+    }
+    var projectRoot = projectRoot.replace(/\/$/, '');
+
+    var from = projectRoot + '/trunk/';
+    var to = projectRoot + '/tags/' + tag;
+
+    var cmd = 'svn cp ' + from + ' ' + to + ' -m "' + message + '" ' + options.args;
+    console.log(cmd);
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return svn.commit('Initial commit', function(err){
+        if(err) throw err;
+    });
+});
+
+// Run svn tag
+gulp.task('tag', function(){
+    svn.<span class="apidocCodeKeywordSpan">tag</span>('version-0.0.1', 'Tagged commit', function (err){
+        if(err) {
+            throw err;
+        }
+    });
+});
+
+// Run gulp
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.tagSync" id="apidoc.element.gulp-svn.tagSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>tagSync
+        <span class="apidocSignatureSpan">(tag, message, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">tagSync = function (tag, message, options, cb) {
+    if (!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!tag) return cb(new Error('Tag must be defined'));
+    if(!message) return cb(new Error('Message must be defined'));
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+
+    var projectRoot;
+    if(options.projectRoot) {
+        projectRoot = options.projectRoot;
+    } else {
+        try {
+            projectRoot = svnProjectRoot.sync();
+        } catch(err) {
+            return cb(err);
+        }
+    }
+    var projectRoot = projectRoot.replace(/\/$/, '');
+
+    var from = projectRoot + '/trunk/';
+    var to = projectRoot + '/tags/' + tag;
+
+    var cmd = 'svn cp ' + from + ' ' + to + ' -m "' + message + '" ' + options.args;
+    console.log(cmd);
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.update" id="apidoc.element.gulp-svn.update">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>update
+        <span class="apidocSignatureSpan">(path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (path, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!path) path = ' ';
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+    var cmd = 'svn update ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd}, function(err, stdout, stderr){
+        if (err) return cb(err);
+        if (!options.quiet) gutil.log(stdout, stderr);
+        cb();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svn.updateSync" id="apidoc.element.gulp-svn.updateSync">
+        function <span class="apidocSignatureSpan">gulp-svn.</span>updateSync
+        <span class="apidocSignatureSpan">(path, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateSync = function (path, options, cb) {
+
+    if(!cb &amp;&amp; typeof options === 'function') {
+        cb = options;
+        options = {};
+    }
+
+    if(!cb || typeof cb !== 'function') cb = function() {};
+    if(!options) options = {};
+    if(!path) path = ' ';
+    if(!options.cwd) options.cwd = process.cwd();
+    if(!options.args) options.args = ' ';
+    var cmd = 'svn update ' + path + ' ' + options.args;
+
+    if(options.username &amp;&amp; options.password) {
+        cmd += ' --username '+ options.username + ' --password ' + options.password;
+    }
+
+    return exec(cmd, {cwd: options.cwd});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
